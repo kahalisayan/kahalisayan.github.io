@@ -21,7 +21,7 @@ fingerprintAlgorithm = "sha512"
 
 # Search-engine verification (paste the codes from Google Search Console / Bing
 # Webmaster Tools; leave empty until you have them). See TODO.md → SEO.
-googleSiteVerification = ""
+googleSiteVerification = "_RY736o9ocywyc1PBLQ03G4-KHGtnelh6Iio8RvlZZA"
 bingSiteVerification = ""
 
 [seo]
