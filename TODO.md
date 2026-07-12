@@ -8,11 +8,13 @@ where a fact was missing it was left as a clear placeholder.
 
 ## A. Required before going live
 
-### 1. GitHub repository — username is `kahalisayan` ✅
-- `baseURL` is set to `https://kahalisayan.github.io/` in `config/_default/hugo.toml`. ✅
-- **Still to do:** create a repository named **exactly** `kahalisayan.github.io` on
-  GitHub, push this repo to it, then set **Settings → Pages → Source → GitHub Actions**.
-- See `MAINTENANCE.md` → “GitHub Pages deployment” for the exact commands.
+### 1. GitHub repository & deployment — LIVE ✅
+- Site is live at **https://kahalisayan.github.io/**, deployed by GitHub Actions on
+  every push to `main`. `baseURL` set in `config/_default/hugo.toml`. ✅
+- **One setting still to flip:** repo **Settings → Pages → Build and deployment →
+  Source → "GitHub Actions"**. This stops the redundant, *failing* legacy
+  "pages build and deployment" (Jekyll) check. It is cosmetic — it does **not** affect
+  the live site (your Hugo workflow already builds and deploys correctly).
 
 ### 2. Public CV (privacy-critical)
 - Your existing CV contains **private data** (phone number, date of birth, marital
@@ -74,19 +76,21 @@ On-page SEO is already built in: meta titles/descriptions, canonical URLs, Open 
 data (Person + WebSite on the homepage, ScholarlyArticle for every journal/conference
 paper). The rest is **off-page** — telling search engines the site exists:
 
-1. **Google Search Console** (most important) — <https://search.google.com/search-console>
-   - Add property `https://kahalisayan.github.io/`.
-   - Verify via the **HTML tag** method: copy the `content="..."` code Google gives you
-     into `googleSiteVerification` in `config/_default/params.toml`, then push.
-   - Once verified, submit the sitemap: `sitemap.xml`.
-2. **Bing Webmaster Tools** — <https://www.bing.com/webmasters> (same idea; paste the
-   code into `bingSiteVerification`). You can also import directly from Search Console.
+1. **Google Search Console** — ownership **VERIFIED** ✅ (HTML-tag; code stored in
+   `googleSiteVerification` in `config/_default/params.toml`). Sitemap `sitemap.xml`
+   **submitted** ✅ — if it shows "Couldn't fetch", that is normal Google lag; the
+   sitemap serves fine (200 / application/xml / 15 URLs) and the status turns green
+   within hours–days. Optional: use **URL inspection → Request indexing** on the
+   homepage to nudge it.
+2. **Bing Webmaster Tools** — <https://www.bing.com/webmasters> (paste the code into
+   `bingSiteVerification`, or import directly from Search Console). Not yet done.
 3. **Backlinks / entity signals** — add `https://kahalisayan.github.io/` to your
    Google Scholar profile, ORCID, LinkedIn, ResearchGate, GitHub bio, Ghost blog, and
    email signature. These help Google associate the site with you (and the `sameAs`
-   links in the Person schema reinforce it — so filling section A.4 also helps SEO).
-4. **Give it time** — indexing typically takes days to a couple of weeks after
-   submission. Searching `site:kahalisayan.github.io` in Google shows what's indexed.
+   links in the Person schema reinforce it). Not yet done.
+4. **Give it time** — indexing typically takes days to a couple of weeks. Search
+   `site:kahalisayan.github.io` in Google, or watch the **Pages** report, to see what's
+   indexed.
 
 ---
 

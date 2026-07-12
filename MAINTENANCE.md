@@ -4,8 +4,35 @@ Personal research website built with [Hugo](https://gohugo.io/) and the
 [Blowfish](https://blowfish.page/) theme, deployed free on GitHub Pages via GitHub
 Actions. Content is driven by Markdown and YAML data files so it is easy to maintain.
 
-> First-time setup checklist lives in [`TODO.md`](TODO.md) (GitHub username, photo,
-> public CV, profile links, DOIs).
+> First-time setup checklist lives in [`TODO.md`](TODO.md) (photo, public CV,
+> profile links, DOIs).
+
+---
+
+## Project status (as of 2026-07-12)
+
+**Live:** https://kahalisayan.github.io/ — deployed automatically by GitHub Actions on
+every push to `main`.
+
+**Done**
+- Full site built (Home, About, Research, Projects, Publications, Patents, Experience,
+  Service, Teaching, Contact) from the CV; external Ghost blog featured via RSS.
+- Deployed to GitHub Pages; repo is **public** (required for free Pages).
+- Google Search Console ownership **verified**; sitemap submitted.
+- Profiles wired in: Google Scholar, ORCID, LinkedIn.
+- Patents: 5 filings with application numbers, linked to their projects.
+- Privacy enforced (no phone / DOB / marital status / IEEE number anywhere).
+
+**Pending (see [`TODO.md`](TODO.md))**
+- Flip **Settings → Pages → Source → "GitHub Actions"** to clear the redundant failing
+  legacy "pages build and deployment" (Jekyll) check — cosmetic, site is unaffected.
+- Add profile photo (`static/images/profile.jpg`) and public CV
+  (`static/files/Sayan_Kahali_Public_CV.pdf`).
+- Add GitHub + ResearchGate links; add publication DOIs in `data/publications.yaml`.
+- Optional: Bing verification, backlinks, request-indexing.
+
+**To resume editing:** change files locally, then
+`git add -A && git commit -m "…" && git push -u origin main`. The push auto-redeploys.
 
 ---
 
