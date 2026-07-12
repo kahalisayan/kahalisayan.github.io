@@ -1,0 +1,43 @@
+# Patents — as provided by the author. Careful status language: a filed
+# application is a pending application, NOT a granted patent.
+# Newest first. `key` is used to link patents from project pages.
+items:
+  - key: intestinal-inflammation-ultrasound
+    title: "Intestinal Inflammation Evaluation Using Multi-Modal Ultrasound Imaging"
+    jurisdiction: "India"
+    status: "Filed"
+    year: 2026
+    application: "Application No. 202641073424"
+    description: "Multi-modal ultrasound imaging approach for evaluating intestinal inflammation."
+
+  - key: spiking-autoencoder-compression
+    title: "Spiking Autoencoder Framework for Lossy Image Compression on Constrained Low-Power Edge Devices"
+    jurisdiction: "India"
+    status: "Filed"
+    year: 2025
+    application: "Application No. 202521127763"
+    description: "Spiking-autoencoder framework for lossy image compression on constrained, low-power edge devices."
+
+  - key: neuromorphic-middleware
+    title: "Neuromorphic Middleware for Hardware Agnostic Design, Testing and Training of Spiking Neural Network Models"
+    jurisdiction: "United States"
+    status: "Filed"
+    year: 2024
+    application: "Application No. 202421087827"
+    description: "Middleware for hardware-agnostic design, testing, and training of spiking neural network models."
+
+  - key: snn-lossless-edge
+    title: "Reduced Data Transmission in Edge Communication Using SNN-Based Lossless Data Compression with Faster Reconstruction"
+    jurisdiction: "United States"
+    status: "Filed"
+    year: 2024
+    application: "Application No. 20260094306"
+    description: "SNN-based lossless data compression that reduces data-transmission volume with faster reconstruction for edge communication."
+
+  - key: snn-lossless-compression
+    title: "Method and System for a Low-Power Lossless Image Compression Using a Spiking Neural Network"
+    jurisdiction: "United States"
+    status: "Filed"
+    year: 2024
+    application: "Application No. 20240422334"
+    description: "Spiking-neural-network method for low-power, lossless image compression."

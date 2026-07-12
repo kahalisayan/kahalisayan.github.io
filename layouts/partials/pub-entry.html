@@ -1,0 +1,55 @@
+{{- /* Renders one publication as an <li>. Input dict: "e" (entry), "type", "id" (unique) */ -}}
+{{- $e := .e -}}
+{{- $type := .type -}}
+{{- $id := .id -}}
+{{- $authors := $e.authors -}}
+{{- $authorsHTML := replace $authors "Sayan Kahali" "<span class=\"me\">Sayan Kahali</span>" -}}
+{{- /* Build BibTeX */ -}}
+{{- $bibAuthors := replace $authors ", " " and " -}}
+{{- $lines := slice -}}
+{{- if eq $type "journal" -}}
+  {{- $lines = $lines | append (printf "@article{%s," $e.key) -}}
+  {{- $lines = $lines | append (printf "  title   = {%s}," $e.title) -}}
+  {{- $lines = $lines | append (printf "  author  = {%s}," $bibAuthors) -}}
+  {{- with $e.journal }}{{ $lines = $lines | append (printf "  journal = {%s}," .) }}{{ end -}}
+  {{- with $e.volume }}{{ $lines = $lines | append (printf "  volume  = {%s}," .) }}{{ end -}}
+  {{- with $e.issue }}{{ $lines = $lines | append (printf "  number  = {%s}," .) }}{{ end -}}
+  {{- with $e.pages }}{{ $lines = $lines | append (printf "  pages   = {%s}," .) }}{{ end -}}
+  {{- with $e.publisher }}{{ $lines = $lines | append (printf "  publisher = {%s}," .) }}{{ end -}}
+  {{- $lines = $lines | append (printf "  year    = {%d}" (int $e.year)) -}}
+  {{- $lines = $lines | append "}" -}}
+{{- else if eq $type "conference" -}}
+  {{- $lines = $lines | append (printf "@inproceedings{%s," $e.key) -}}
+  {{- $lines = $lines | append (printf "  title     = {%s}," $e.title) -}}
+  {{- $lines = $lines | append (printf "  author    = {%s}," $bibAuthors) -}}
+  {{- with $e.booktitle }}{{ $lines = $lines | append (printf "  booktitle = {%s}," .) }}{{ end -}}
+  {{- with $e.volume }}{{ $lines = $lines | append (printf "  volume    = {%s}," .) }}{{ end -}}
+  {{- with $e.pages }}{{ $lines = $lines | append (printf "  pages     = {%s}," .) }}{{ end -}}
+  {{- with $e.publisher }}{{ $lines = $lines | append (printf "  publisher = {%s}," .) }}{{ end -}}
+  {{- with $e.location }}{{ $lines = $lines | append (printf "  address   = {%s}," .) }}{{ end -}}
+  {{- $lines = $lines | append (printf "  year      = {%d}" (int $e.year)) -}}
+  {{- $lines = $lines | append "}" -}}
+{{- else -}}
+  {{- $lines = $lines | append (printf "@misc{%s," $e.key) -}}
+  {{- $lines = $lines | append (printf "  title        = {%s}," $e.title) -}}
+  {{- $lines = $lines | append (printf "  author       = {%s}," $bibAuthors) -}}
+  {{- with $e.venue }}{{ $lines = $lines | append (printf "  howpublished = {%s}," .) }}{{ end -}}
+  {{- $lines = $lines | append (printf "  year         = {%d}" (int $e.year)) -}}
+  {{- $lines = $lines | append "}" -}}
+{{- end -}}
+{{- $bibtex := delimit $lines "\n" -}}
+<li class="pub-item" id="pub-{{ $id }}">
+  <p class="pub-title">{{ $e.title }}</p>
+  <p class="pub-authors">{{ $authorsHTML | safeHTML }}</p>
+  <p class="pub-venue">
+    {{ $e.venue }}{{ with $e.volume }}, vol. {{ . }}{{ end }}{{ with $e.issue }}, no. {{ . }}{{ end }}{{ with $e.pages }}, pp. {{ . }}{{ end }}{{ with $e.location }}, {{ . }}{{ end }}, {{ $e.year }}.{{ with $e.award }} <strong>{{ . }}.</strong>{{ end }}
+  </p>
+  <div class="pub-actions">
+    {{ with $e.doi }}<a href="https://doi.org/{{ . }}" rel="noopener" target="_blank">DOI</a>{{ end }}
+    {{ with $e.url }}<a href="{{ . }}" rel="noopener" target="_blank">Link</a>{{ end }}
+    {{ with $e.pdf }}<a href="{{ . }}" rel="noopener" target="_blank">PDF</a>{{ end }}
+    {{ with $e.code }}<a href="{{ . }}" rel="noopener" target="_blank">Code</a>{{ end }}
+    <button type="button" class="bibtex-toggle" data-target="bib-{{ $id }}" aria-expanded="false">BibTeX</button>
+  </div>
+  <pre class="bibtex-box" id="bib-{{ $id }}">{{ $bibtex }}</pre>
+</li>

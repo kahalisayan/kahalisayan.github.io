@@ -1,0 +1,82 @@
+# -- Theme Options --
+# https://blowfish.page/docs/configuration/#theme-parameters
+
+colorScheme = "sayan"          # custom scheme defined in assets/css/schemes/sayan.css
+defaultAppearance = "light"    # light or dark
+autoSwitchAppearance = true    # follow the visitor's system theme
+
+enableA11y = true
+enableSearch = true            # Pagefind index is generated in CI
+enableCodeCopy = true
+enableStructuredBreadcrumbs = true
+
+replyByEmail = false
+
+mainSections = ["projects"]
+
+disableImageOptimization = false
+disableTextInHeader = false
+
+fingerprintAlgorithm = "sha512"
+
+# Search-engine verification (paste the codes from Google Search Console / Bing
+# Webmaster Tools; leave empty until you have them). See TODO.md → SEO.
+googleSiteVerification = ""
+bingSiteVerification = ""
+
+[seo]
+  metaDescriptionOrder = ["summary", "description", "site"]
+
+[header]
+  layout = "fixed-fill-blur"   # subtle fixed header
+
+[footer]
+  showMenu = true
+  showCopyright = true
+  showThemeAttribution = false
+  showAppearanceSwitcher = true
+  showScrollToTop = true
+
+[homepage]
+  layout = "custom"            # rendered by layouts/partials/home/custom.html
+  showRecent = false
+
+[article]
+  showDate = false   # evergreen pages have no date; avoids "1 January 0001"
+  showDateOnlyInArticle = false
+  showDateUpdated = false
+  showAuthor = false
+  showHero = false
+  showBreadcrumbs = true
+  showDraftLabel = true
+  showEdit = false
+  showHeadingAnchors = true
+  showPagination = false
+  showReadingTime = false
+  showTableOfContents = true
+  showTaxonomies = true
+  showCategories = true
+  showTags = true
+  showWordCount = false
+  showZenMode = false
+
+[list]
+  showHero = false
+  showBreadcrumbs = true
+  showSummary = true
+  showTableOfContents = false
+  showCards = false
+  groupByYear = false
+  constrainItemsWidth = true
+
+[sitemap]
+  excludedKinds = ["taxonomy", "term"]
+
+[taxonomy]
+  showTermCount = true
+  showHero = false
+  showBreadcrumbs = true
+
+[term]
+  showHero = false
+  showBreadcrumbs = true

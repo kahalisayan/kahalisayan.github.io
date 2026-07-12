@@ -1,0 +1,137 @@
+{{- $author := site.Params.author -}}
+{{- $hasPhoto := os.FileExists "static/images/profile.jpg" -}}
+
+<div class="max-w-full">
+
+  {{/* ---------------- Hero ---------------- */}}
+  <section class="hero">
+    <div style="justify-self:center">
+      {{- if $hasPhoto -}}
+        <img class="hero-portrait" src="{{ "images/profile.jpg" | relURL }}"
+             width="180" height="180"
+             alt="Portrait of Dr. Sayan Kahali">
+      {{- else -}}
+        <div class="hero-initials" aria-hidden="true">SK</div>
+      {{- end -}}
+    </div>
+    <div>
+      <h1>{{ $author.name }}</h1>
+      <p class="title">Senior AI Research Scientist</p>
+      <p class="affiliation">Asian Institute of Gastroenterology Hospitals · Hyderabad, India</p>
+      <p class="statement">
+        I work at the intersection of biomedical image analysis, quantitative MRI,
+        trustworthy clinical AI, computer vision, and neuromorphic computing —
+        developing AI systems that are reliable, interpretable, efficient, and
+        clinically meaningful.
+      </p>
+      <div class="btn-row">
+        {{ partial "cv-button.html" (dict "primary" true) }}
+        <a class="btn" href="{{ "publications/" | relURL }}">Publications</a>
+        <a class="btn" href="{{ "projects/" | relURL }}">Projects</a>
+        <a class="btn" href="{{ "contact/" | relURL }}">Contact</a>
+      </div>
+      <div class="mt-3 text-2xl">{{ partial "author-links.html" . }}</div>
+    </div>
+  </section>
+
+  {{/* ---------------- Research focus ---------------- */}}
+  <section class="home-section">
+    <h2 class="section-heading">Research focus<span class="rule"></span></h2>
+    <div class="card-grid cols-3">
+      {{ range hugo.Data.research.themes }}
+        <div class="card">
+          <h3>{{ .title }}</h3>
+          <p>{{ .short }}</p>
+        </div>
+      {{ end }}
+    </div>
+    <p style="margin-top:1rem"><a class="btn" href="{{ "research/" | relURL }}">More on research →</a></p>
+  </section>
+
+  {{/* ---------------- Selected projects ---------------- */}}
+  {{ with (site.GetPage "projects") }}
+    <section class="home-section">
+      <h2 class="section-heading">Selected projects<span class="rule"></span></h2>
+      <div class="card-grid cols-2">
+        {{ range first 4 .Pages.ByWeight }}
+          <a class="card card-link" href="{{ .RelPermalink }}">
+            {{ with .Params.status }}<span class="status-badge">{{ . }}</span>{{ end }}
+            <h3 style="margin-top:.5rem">{{ .Title }}</h3>
+            <p>{{ .Params.summary }}</p>
+          </a>
+        {{ end }}
+      </div>
+      <p style="margin-top:1rem"><a class="btn" href="{{ .RelPermalink }}">All projects →</a></p>
+    </section>
+  {{ end }}
+
+  {{/* ---------------- Selected publications ---------------- */}}
+  {{ $pubs := hugo.Data.publications }}
+  {{ $selected := slice }}
+  {{ range $t := slice "journal" "conference" "abstract" }}
+    {{ range where (index $pubs $t) "selected" true }}
+      {{ $selected = $selected | append (dict "e" . "type" $t) }}
+    {{ end }}
+  {{ end }}
+  {{ with $selected }}
+    <section class="home-section">
+      <h2 class="section-heading">Selected publications<span class="rule"></span></h2>
+      <ol class="pub-list">
+        {{ range $i, $s := . }}
+          {{ partial "pub-entry.html" (dict "e" $s.e "type" $s.type "id" (printf "home-%d" $i)) }}
+        {{ end }}
+      </ol>
+      <p style="margin-top:1rem"><a class="btn" href="{{ "publications/" | relURL }}">All publications →</a></p>
+    </section>
+  {{ end }}
+
+  {{/* ---------------- Latest updates ---------------- */}}
+  {{ with hugo.Data.news.items }}
+    <section class="home-section">
+      <h2 class="section-heading">Latest updates<span class="rule"></span></h2>
+      <ul class="news-list">
+        {{ range first 6 . }}
+          <li>
+            <span class="news-date">{{ .date }}</span>
+            <span class="news-body">{{ .text }}</span>
+          </li>
+        {{ end }}
+      </ul>
+    </section>
+  {{ end }}
+
+  {{/* ---------------- Career timeline ---------------- */}}
+  {{ with hugo.Data.experience.roles }}
+    <section class="home-section">
+      <h2 class="section-heading">Career<span class="rule"></span></h2>
+      <ul class="timeline">
+        {{ range . }}
+          <li>
+            <span class="tl-when">{{ .when }}</span>
+            <span>
+              <span class="tl-what">{{ .title }}</span><br>
+              <span class="tl-where">{{ .org }}{{ with .location }} · {{ . }}{{ end }}</span>
+            </span>
+          </li>
+        {{ end }}
+      </ul>
+      <p style="margin-top:1rem"><a class="btn" href="{{ "experience/" | relURL }}">Full experience →</a></p>
+    </section>
+  {{ end }}
+
+  {{/* ---------------- Blog feed (external Ghost) ---------------- */}}
+  {{ partial "blog-feed.html" (dict "limit" 3) }}
+
+  {{/* ---------------- Collaboration ---------------- */}}
+  <section class="home-section">
+    <h2 class="section-heading">Collaboration<span class="rule"></span></h2>
+    <p style="max-width:42rem;line-height:1.6">
+      I welcome research collaborations in biomedical imaging, trustworthy clinical AI,
+      quantitative MRI, multimodal learning, and efficient intelligent systems.
+    </p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="mailto:{{ $author.email }}">Get in touch</a>
+    </div>
+  </section>
+
+</div>

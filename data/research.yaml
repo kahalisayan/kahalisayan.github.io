@@ -1,0 +1,51 @@
+# Research themes — reused on the homepage cards and the Research page.
+themes:
+  - title: "Clinical and Biomedical AI"
+    short: "Medical image analysis for clinically meaningful decision support, with attention to validation, robustness, and safe deployment."
+    long: >
+      Developing and evaluating AI methods for real clinical imaging workflows, where
+      the bar is not accuracy on a benchmark but reliability under the conditions of
+      practice. This includes designing tasks around clinical questions, validating
+      against clinically aligned endpoints, and studying how models behave under
+      acquisition variation and domain shift.
+
+  - title: "Medical Image Segmentation"
+    short: "Segmentation of anatomical structures and pathology across MRI, ultrasound, and endoscopic imaging."
+    long: >
+      Segmentation of anatomical structures and pathology in MRI, ultrasound,
+      colonoscopy, and related modalities. Earlier work on volumetric brain MRI
+      segmentation combined fuzzy clustering, intensity-inhomogeneity modelling, and
+      multi-objective optimization; current work extends segmentation to
+      gastrointestinal imaging.
+
+  - title: "Quantitative MRI and Neuroimaging"
+    short: "Deep-learning and model-based approaches for quantitative MRI, qGRE, and functional connectivity."
+    long: >
+      Deep-learning and biophysical-model approaches for quantitative MRI, including
+      accelerated and noise-suppressed qGRE reconstruction, motion-artifact removal,
+      and estimation of metrics related to neuronal structure and hemodynamics. On the
+      neuroimaging side, this connects to resting-state functional connectivity and its
+      relationship to neuron–glia–synaptic composition.
+
+  - title: "Trustworthy and Uncertainty-Aware AI"
+    short: "Calibration, uncertainty estimation, robustness, and clinically aligned validation."
+    long: >
+      Making predictions trustworthy enough for clinical settings: calibration and
+      uncertainty estimation, behaviour under domain shift, confidence-aware prediction,
+      and robustness evaluation aligned with how clinicians would actually use a model's
+      output.
+
+  - title: "Efficient and Neuromorphic AI"
+    short: "Spiking neural networks, low-power intelligence, and hardware-aware model design for the edge."
+    long: >
+      Efficient intelligence for constrained hardware: spiking neural networks,
+      low-power lossless image compression, and hardware-aware design for edge and
+      satellite systems. This line of work is reflected in the SPIKECODE compression
+      research and related patent filings.
+
+  - title: "Multimodal and Foundation-Model Research"
+    short: "Multimodal learning, foundation-model adaptation, and clinically grounded medical vision-language systems."
+    long: >
+      Adapting multimodal and foundation models to medical settings, including medical
+      vision–language systems and clinically grounded reasoning, with the same emphasis
+      on validation and reliability that runs through the rest of the work.

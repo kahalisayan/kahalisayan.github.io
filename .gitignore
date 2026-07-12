@@ -1,0 +1,16 @@
+# Hugo build output & caches
+/public/
+/resources/_gen/
+/.hugo_build.lock
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Node (not required, but ignore if ever used locally)
+/node_modules/
+
+# Never commit the private CV or private source documents
+/static/files/Sayan_Kahali_CV.pdf

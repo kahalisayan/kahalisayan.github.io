@@ -1,0 +1,7 @@
+{{- /* Renders a "Download CV" button only if the public CV exists.
+       Keeps the site from linking a missing/private file. See TODO.md.
+       Param: "primary" (bool) for button styling. */ -}}
+{{- $path := "static/files/Sayan_Kahali_Public_CV.pdf" -}}
+{{- if os.FileExists $path -}}
+  <a class="btn{{ if .primary }} btn-primary{{ end }}" href="{{ "files/Sayan_Kahali_Public_CV.pdf" | relURL }}" rel="noopener">Download CV</a>
+{{- end -}}

@@ -1,0 +1,42 @@
+/* "sayan" scheme — deep navy, muted teal, warm slate off-white.
+   Restrained, senior-researcher palette. Values are "R, G, B" triples
+   consumed by Blowfish via rgba(var(--color-*), <alpha>). */
+:root {
+  --color-neutral: 250, 249, 246; /* warm off-white page background */
+
+  /* Neutral — warm slate */
+  --color-neutral-50: 247, 246, 243;
+  --color-neutral-100: 239, 238, 234;
+  --color-neutral-200: 226, 225, 219;
+  --color-neutral-300: 204, 204, 197;
+  --color-neutral-400: 156, 157, 149;
+  --color-neutral-500: 110, 113, 105;
+  --color-neutral-600: 81, 85, 78;
+  --color-neutral-700: 57, 61, 56;
+  --color-neutral-800: 37, 41, 39;
+  --color-neutral-900: 22, 26, 25;
+
+  /* Primary — deep navy */
+  --color-primary-50: 240, 245, 250;
+  --color-primary-100: 218, 229, 242;
+  --color-primary-200: 184, 204, 226;
+  --color-primary-300: 139, 170, 202;
+  --color-primary-400: 91, 128, 168;
+  --color-primary-500: 52, 91, 134;
+  --color-primary-600: 33, 66, 110;
+  --color-primary-700: 24, 52, 90;
+  --color-primary-800: 18, 40, 70;
+  --color-primary-900: 13, 30, 54;
+
+  /* Secondary — muted teal */
+  --color-secondary-50: 236, 247, 246;
+  --color-secondary-100: 206, 232, 230;
+  --color-secondary-200: 166, 214, 211;
+  --color-secondary-300: 117, 189, 185;
+  --color-secondary-400: 74, 159, 155;
+  --color-secondary-500: 45, 130, 127;
+  --color-secondary-600: 34, 106, 104;
+  --color-secondary-700: 28, 86, 84;
+  --color-secondary-800: 25, 69, 68;
+  --color-secondary-900: 22, 56, 55;
+}

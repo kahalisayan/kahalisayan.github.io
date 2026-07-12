@@ -1,0 +1,40 @@
+{{ define "main" }}
+  {{ $d := hugo.Data.service }}
+  <article class="max-w-full">
+    <header class="max-w-prose">
+      {{ partial "breadcrumbs.html" . }}
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title }}</h1>
+    </header>
+    <section class="max-w-full mt-6 prose dark:prose-invert">{{ .Content }}</section>
+
+    <h2 class="section-heading mt-10">Journal Reviewing<span class="rule"></span></h2>
+    <p class="pub-authors" style="margin-bottom:.75rem">Reviewer for the following journals:</p>
+    <div class="card-grid cols-2">
+      {{ range $d.reviewing }}<div class="card"><p>{{ . }}</p></div>{{ end }}
+    </div>
+
+    <h2 class="section-heading mt-10">Professional Memberships<span class="rule"></span></h2>
+    <ul class="meta-list">
+      {{ range $d.memberships }}<li><p class="pub-authors" style="margin:0">{{ . }}</p></li>{{ end }}
+    </ul>
+
+    <h2 class="section-heading mt-10">Workshops and Courses<span class="rule"></span></h2>
+    <ul class="meta-list">
+      {{ range $d.workshops }}
+        <li>
+          <span class="meta-tag">{{ .when }}</span>
+          <p class="pub-title" style="margin-top:.25rem">{{ .name }}</p>
+          <p class="pub-authors">{{ .org }}</p>
+        </li>
+      {{ end }}
+    </ul>
+    <h3 class="mt-6" style="font-weight:600">Selected online courses</h3>
+    <ul>
+      {{ range $d.courses }}<li>{{ . }}</li>{{ end }}
+    </ul>
+    <h3 class="mt-4" style="font-weight:600">Certifications</h3>
+    <ul>
+      {{ range $d.certifications }}<li>{{ . }}</li>{{ end }}
+    </ul>
+  </article>
+{{ end }}

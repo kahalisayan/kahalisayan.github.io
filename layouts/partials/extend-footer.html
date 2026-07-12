@@ -1,0 +1,29 @@
+{{- /* Toggle + copy behaviour for BibTeX boxes. Progressive enhancement:
+       entries render fully without JS; JS only adds show/hide and copy. */ -}}
+<script>
+(function () {
+  document.addEventListener('click', function (ev) {
+    var btn = ev.target.closest('.bibtex-toggle');
+    if (btn) {
+      var box = document.getElementById(btn.getAttribute('data-target'));
+      if (!box) return;
+      var open = box.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      return;
+    }
+    var box = ev.target.closest('.bibtex-box');
+    if (box && navigator.clipboard) {
+      navigator.clipboard.writeText(box.textContent).then(function () {
+        var prev = box.getAttribute('data-label');
+        if (prev) return;
+        box.setAttribute('data-label', '1');
+        var hint = document.createElement('div');
+        hint.textContent = 'Copied to clipboard';
+        hint.style.cssText = 'font-size:.7rem;margin-top:.4rem;opacity:.7';
+        box.appendChild(hint);
+        setTimeout(function () { hint.remove(); box.removeAttribute('data-label'); }, 1500);
+      });
+    }
+  });
+})();
+</script>

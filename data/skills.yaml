@@ -1,0 +1,10 @@
+# Technical skills — from CV. Grouped for the About page.
+groups:
+  - name: "Programming"
+    items: ["Python (NumPy)", "C", "Java", "R (basic)"]
+  - name: "Deep Learning & ML"
+    items: ["PyTorch", "TensorFlow", "scikit-learn"]
+  - name: "Medical Imaging & Neuroimaging"
+    items: ["FSL", "FreeSurfer"]
+  - name: "Scientific Computing"
+    items: ["MATLAB"]

@@ -1,0 +1,65 @@
+{{- /* SEO: verification meta, Person + WebSite schema (home), ScholarlyArticle schema (publications). */ -}}
+
+{{- /* Google Search Console verification — set googleSiteVerification in params.toml */ -}}
+{{- with site.Params.googleSiteVerification -}}
+<meta name="google-site-verification" content="{{ . }}">
+{{- end -}}
+{{- with site.Params.bingSiteVerification -}}
+<meta name="msvalidate.01" content="{{ . }}">
+{{- end -}}
+
+{{- if .IsHome -}}
+  {{- $author := site.Params.author -}}
+  {{- $sameAs := slice -}}
+  {{- range $author.links -}}
+    {{- range $k, $v := . -}}
+      {{- if ne $k "email" -}}{{- $sameAs = $sameAs | append $v -}}{{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $person := dict
+    "@context" "https://schema.org"
+    "@type" "Person"
+    "name" "Dr. Sayan Kahali"
+    "jobTitle" "Senior AI Research Scientist"
+    "email" (printf "mailto:%s" $author.email)
+    "url" site.BaseURL
+    "affiliation" (dict "@type" "Organization" "name" "Asian Institute of Gastroenterology Hospitals")
+    "knowsAbout" (slice "Biomedical Image Analysis" "Medical Image Segmentation" "Quantitative MRI" "Trustworthy AI" "Neuromorphic Computing" "Computer Vision")
+  -}}
+  {{- if $sameAs -}}{{- $person = merge $person (dict "sameAs" $sameAs) -}}{{- end -}}
+  <script type="application/ld+json">{{ $person | jsonify (dict "indent" "  ") | safeJS }}</script>
+  {{- $website := dict
+    "@context" "https://schema.org"
+    "@type" "WebSite"
+    "name" "Dr. Sayan Kahali"
+    "url" site.BaseURL
+    "author" (dict "@type" "Person" "name" "Dr. Sayan Kahali")
+  -}}
+  <script type="application/ld+json">{{ $website | jsonify (dict "indent" "  ") | safeJS }}</script>
+{{- end -}}
+
+{{- if eq .RelPermalink (relURL "/publications/") -}}
+  {{- $pubs := hugo.Data.publications -}}
+  {{- $articles := slice -}}
+  {{- range $t := slice "journal" "conference" -}}
+    {{- range index $pubs $t -}}
+      {{- $authorList := slice -}}
+      {{- range (split .authors ", ") -}}
+        {{- $authorList = $authorList | append (dict "@type" "Person" "name" .) -}}
+      {{- end -}}
+      {{- $a := dict
+        "@context" "https://schema.org"
+        "@type" "ScholarlyArticle"
+        "headline" .title
+        "author" $authorList
+        "datePublished" (printf "%d" (int .year))
+        "isPartOf" (dict "@type" "Periodical" "name" .venue)
+      -}}
+      {{- with .doi -}}{{- $a = merge $a (dict "sameAs" (printf "https://doi.org/%s" .)) -}}{{- end -}}
+      {{- $articles = $articles | append $a -}}
+    {{- end -}}
+  {{- end -}}
+  {{- range $articles -}}
+  <script type="application/ld+json">{{ . | jsonify | safeJS }}</script>
+  {{- end -}}
+{{- end -}}

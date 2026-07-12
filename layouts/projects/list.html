@@ -1,0 +1,19 @@
+{{ define "main" }}
+  <article class="max-w-full">
+    <header class="max-w-prose">
+      {{ partial "breadcrumbs.html" . }}
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title }}</h1>
+    </header>
+    <section class="max-w-full mt-6 prose dark:prose-invert">{{ .Content }}</section>
+
+    <div class="card-grid cols-2 mt-8">
+      {{ range .Pages.ByWeight }}
+        <a class="card card-link" href="{{ .RelPermalink }}">
+          {{ with .Params.status }}<span class="status-badge">{{ . }}</span>{{ end }}
+          <h3 style="margin-top:.5rem">{{ .Title }}</h3>
+          <p>{{ .Params.summary | default .Summary }}</p>
+        </a>
+      {{ end }}
+    </div>
+  </article>
+{{ end }}

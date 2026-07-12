@@ -1,0 +1,17 @@
+# Latest updates — seed only with verifiable facts from the CV.
+# Add new items at the top. date is free text (shown as-is).
+items:
+  - date: "2026"
+    text: "India patent filed on intestinal inflammation evaluation using multi-modal ultrasound imaging."
+  - date: "2025"
+    text: "Joined the Asian Institute of Gastroenterology Hospitals, Hyderabad as Senior AI Research Scientist."
+  - date: "2025"
+    text: "India patent filed on a spiking-autoencoder framework for lossy image compression on low-power edge devices."
+  - date: "2024"
+    text: "US patents filed on spiking-neural-network image compression and on neuromorphic middleware for spiking neural network models."
+  - date: "2023"
+    text: "DANSE — deep-learning accelerated, noise-suppressed estimation of qGRE MRI metrics — published in NMR in Biomedicine."
+  - date: "2023"
+    text: "SPIKECODE work on low-power lossless image compression for satellite edge presented at IJCNN 2023, Queensland, Australia."
+  - date: "2021"
+    text: "Study on neuron–glia–synaptic composition and resting-state functional connectivity networks published in Brain Sciences."

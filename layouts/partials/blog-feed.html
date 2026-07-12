@@ -1,0 +1,36 @@
+{{- /* Fetches the latest posts from the external Ghost blog at build time.
+       Fails silently (renders nothing) if the feed is unreachable, so a
+       build never breaks because of the remote blog. */ -}}
+{{- $feed := "https://the-conscious-compiler.ghost.io/rss/" -}}
+{{- $limit := .limit | default 3 -}}
+{{- $items := slice -}}
+{{- with try (resources.GetRemote $feed) -}}
+  {{- with .Value -}}
+    {{- $data := unmarshal .Content -}}
+    {{- with $data.channel -}}
+      {{- $raw := .item -}}
+      {{- if reflect.IsMap $raw -}}{{- $raw = slice $raw -}}{{- end -}}
+      {{- range first $limit $raw -}}
+        {{- $items = $items | append . -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- with $items -}}
+  <section class="home-section">
+    <h2 class="section-heading">From the blog<span class="rule"></span></h2>
+    <div class="card-grid cols-3">
+      {{- range . -}}
+        {{- $date := "" -}}
+        {{- with .pubDate -}}{{- $date = (time.AsTime . | time.Format "Jan 2006") -}}{{- end -}}
+        <a class="card card-link" href="{{ .link }}" rel="noopener" target="_blank">
+          {{ with $date }}<span class="meta-tag">{{ . }}</span>{{ end }}
+          <h3 style="margin-top:.35rem">{{ .title }}</h3>
+        </a>
+      {{- end -}}
+    </div>
+    <p style="margin-top:1rem">
+      <a class="btn" href="https://the-conscious-compiler.ghost.io/" rel="noopener" target="_blank">Read the blog →</a>
+    </p>
+  </section>
+{{- end -}}

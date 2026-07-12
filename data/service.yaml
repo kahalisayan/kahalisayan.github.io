@@ -1,0 +1,38 @@
+# Academic service — verbatim from CV.
+reviewing:
+  - "Nature Scientific Reports"
+  - "Expert Systems (Elsevier)"
+  - "IEEE Transactions on Systems, Man, and Cybernetics: Systems"
+  - "IEEE Access"
+  - "IET Image Processing"
+  - "Applied Soft Computing (Elsevier)"
+  - "Soft Computing (Springer)"
+  - "International Journal of Imaging Systems and Technology (Wiley)"
+  - "Computer Methods in Biomechanics and Biomedical Engineering: Imaging & Visualization (Taylor & Francis)"
+  - "Informatica"
+  - "BMC Medical Imaging"
+
+memberships:
+  - "Senior Member, IEEE (USA)"
+  - "Life Member, Indian Unit for Pattern Recognition and Artificial Intelligence (IUPRAI), India"
+  - "Member, International Society for Magnetic Resonance in Medicine (ISMRM), USA"
+  - "Member, Organization for Human Brain Mapping (OHBM), USA"
+
+workshops:
+  - name: "Digital Topology and Geometry in Medical Imaging: Theory and Application (MHRD-GIAN)"
+    org: "Jadavpur University, Kolkata, India"
+    when: "January 2017"
+  - name: "Digital Restoration of Heritage Paintings and Artifacts (Workshop)"
+    org: "Indian Statistical Institute, Kolkata, India"
+    when: "August 2013"
+  - name: "Software Modeling with Unified Modeling Language (FDP)"
+    org: "NITTTR, Kolkata, India"
+    when: "January 2012"
+
+courses:
+  - "Neural Networks and Deep Learning — deeplearning.ai, Coursera"
+  - "Convolutional Neural Networks in TensorFlow — deeplearning.ai, Coursera"
+  - "Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning — deeplearning.ai, Coursera"
+
+certifications:
+  - "Sun Certified Java Programmer (SCJP)"

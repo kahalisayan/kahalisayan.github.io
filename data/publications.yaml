@@ -1,0 +1,260 @@
+# Publications — source of truth is the CV. Bibliographic details verbatim.
+# DOI/url/pdf/code left empty where not verified (see TODO.md). Do NOT invent DOIs.
+# type: journal | conference | abstract
+# The template bolds "Sayan Kahali" in the authors string automatically.
+
+journal:
+  - key: kahali2016biasfield
+    selected: true
+    title: "On estimation of bias field in MRI images: polynomial Vs. Gaussian surface fitting method"
+    authors: "Sayan Kahali, Sudip Kumar Adhikari, Jamuna Kanta Sing"
+    venue: "Journal of Chemometrics (Wiley)"
+    journal: "Journal of Chemometrics"
+    publisher: "Wiley"
+    volume: "30"
+    issue: "10"
+    pages: "602-620"
+    year: 2016
+    doi: ""
+    url: ""
+    tags: ["MRI", "bias-field correction", "medical imaging"]
+
+  - key: kahali2017twostage
+    selected: true
+    title: "A Two-Stage Multi-objective Framework for Segmentation of 3D MRI Brain Image Data"
+    authors: "Sayan Kahali, Sudip Kumar Adhikari, Jamuna Kanta Sing"
+    venue: "Applied Soft Computing (Elsevier)"
+    journal: "Applied Soft Computing"
+    publisher: "Elsevier"
+    volume: "60"
+    issue: ""
+    pages: "312-327"
+    year: 2017
+    doi: ""
+    url: ""
+    tags: ["brain MRI", "segmentation", "multi-objective optimization"]
+
+  - key: kahali2017convolution
+    selected: false
+    title: "Convolution of 3D Gaussian Surfaces for Volumetric Intensity Inhomogeneity Estimation and Correction in 3D Brain MR Image Data"
+    authors: "Sayan Kahali, Sudip Kumar Adhikari, Jamuna Kanta Sing"
+    venue: "IET Computer Vision"
+    journal: "IET Computer Vision"
+    publisher: "IET"
+    volume: "12"
+    issue: "3"
+    pages: "288-297"
+    year: 2017
+    doi: ""
+    url: ""
+    tags: ["brain MRI", "intensity inhomogeneity", "bias-field correction"]
+
+  - key: mahata2018local
+    selected: false
+    title: "Local Contextual Information and Gaussian Function Induced Fuzzy Clustering Algorithm for Brain MR Image Segmentation and Intensity Inhomogeneity Estimation"
+    authors: "Nabanita Mahata, Sayan Kahali, Sudip Kumar Adhikari, Jamuna Kanta Sing"
+    venue: "Applied Soft Computing (Elsevier)"
+    journal: "Applied Soft Computing"
+    publisher: "Elsevier"
+    volume: "68"
+    issue: ""
+    pages: "586-596"
+    year: 2018
+    doi: ""
+    url: ""
+    tags: ["brain MRI", "fuzzy clustering", "segmentation"]
+
+  - key: kahali2019entropy
+    selected: false
+    title: "A new entropy-based approach for fuzzy c-means clustering and its application to brain MR image data"
+    authors: "Sayan Kahali, Jamuna Kanta Sing, Punam Kumar Saha"
+    venue: "Soft Computing (Springer)"
+    journal: "Soft Computing"
+    publisher: "Springer"
+    volume: "23"
+    issue: "20"
+    pages: "10407-10414"
+    year: 2019
+    doi: ""
+    url: ""
+    tags: ["fuzzy clustering", "entropy", "brain MRI"]
+
+  - key: torop2020roar
+    selected: false
+    title: "Deep learning using a biophysical model for Robust and Accelerated Reconstruction (RoAR) of quantitative and artifact-free R2* images"
+    authors: "Max Torop, Satya Kothapalli, Yu Sun, Jiaming Liu, Sayan Kahali, Dmitriy A. Yablonskiy, Ulugbek S. Kamilov"
+    venue: "Magnetic Resonance in Medicine (Wiley)"
+    journal: "Magnetic Resonance in Medicine"
+    publisher: "Wiley"
+    volume: "84"
+    issue: "6"
+    pages: "2932-2942"
+    year: 2020
+    doi: ""
+    url: ""
+    tags: ["quantitative MRI", "deep learning", "R2* reconstruction"]
+
+  - key: kahali2021rsfc
+    selected: true
+    title: "The Role of the Human Brain Neuron-Glia-Synaptic Composition in Forming Resting State Functional Connectivity Networks"
+    authors: "Sayan Kahali, Marcus E. Raichle, Dmitriy A. Yablonskiy"
+    venue: "Brain Sciences (MDPI)"
+    journal: "Brain Sciences"
+    publisher: "MDPI"
+    volume: "11"
+    issue: "12"
+    pages: ""
+    year: 2021
+    doi: ""
+    url: ""
+    tags: ["resting-state fMRI", "functional connectivity", "neuroimaging"]
+
+  - key: xu2022learn
+    selected: false
+    title: "Learning-based Motion Artifact Removal Networks (LEARN) for Quantitative R2* Mapping"
+    authors: "Xiaojian Xu, Satya V.V.N. Kothapalli, Jiaming Liu, Sayan Kahali, Weijie Gan, Dmitriy A. Yablonskiy, Ulugbek S. Kamilov"
+    venue: "Magnetic Resonance in Medicine (Wiley)"
+    journal: "Magnetic Resonance in Medicine"
+    publisher: "Wiley"
+    volume: "88"
+    issue: "1"
+    pages: "106-119"
+    year: 2022
+    doi: ""
+    url: ""
+    tags: ["quantitative MRI", "motion-artifact removal", "deep learning"]
+
+  - key: kahali2023danse
+    selected: true
+    title: "Deep-Learning-Based Accelerated and Noise-Suppressed Estimation (DANSE) of quantitative Gradient Recalled Echo (qGRE) MRI metrics associated with Human Brain Neuronal Structure and Hemodynamic Properties"
+    authors: "Sayan Kahali, Satya V.V.N. Kothapalli, Xiaojian Xu, Ulugbek S. Kamilov, Dmitriy A. Yablonskiy"
+    venue: "NMR in Biomedicine (Wiley)"
+    journal: "NMR in Biomedicine"
+    publisher: "Wiley"
+    volume: "36"
+    issue: "5"
+    pages: "e4883"
+    year: 2023
+    doi: ""
+    url: ""
+    tags: ["quantitative MRI", "qGRE", "deep learning", "neuroimaging"]
+
+conference:
+  - key: kahali2015biasfield
+    selected: false
+    title: "On estimation of bias field in MRI images"
+    authors: "Sayan Kahali, Sudip Kumar Adhikari, Jamuna Kanta Sing"
+    venue: "IEEE Int. Conf. on Computer Graphics, Vision and Information Security (CGVIS)"
+    booktitle: "IEEE International Conference on Computer Graphics, Vision and Information Security (CGVIS)"
+    publisher: "IEEE"
+    pages: "269-274"
+    year: 2015
+    location: "Bhubaneswar, India"
+    doi: ""
+    url: ""
+    tags: ["MRI", "bias-field correction"]
+
+  - key: kahali2017cicba
+    selected: false
+    award: "Springer Best Paper Award"
+    title: "3D MRI Brain Image Segmentation: A Two-Stage Framework"
+    authors: "Sayan Kahali, Sudip Kumar Adhikari, Jamuna Kanta Sing"
+    venue: "First Int. Conf. on Computational Intelligence, Communications, and Business Analytics (CICBA), Springer CCIS"
+    booktitle: "First International Conference on Computational Intelligence, Communications, and Business Analytics (CICBA), Springer CCIS"
+    publisher: "Springer"
+    pages: "323-335"
+    year: 2017
+    location: "Kolkata, India"
+    doi: ""
+    url: ""
+    tags: ["brain MRI", "segmentation"]
+
+  - key: mahata2017mami
+    selected: false
+    title: "A Fuzzy Clustering Algorithm with Local Contextual Information and Gaussian Function for Simultaneous Brain MR Image Segmentation and Intensity Inhomogeneity Estimation"
+    authors: "Nabanita Mahata, Sayan Kahali, Jamuna Kanta Sing, Sudip Kumar Adhikari"
+    venue: "2nd Int. Conf. on Man and Machine Interfacing (MAMI)"
+    booktitle: "2nd International Conference on Man and Machine Interfacing (MAMI)"
+    publisher: "IEEE"
+    pages: "1-6"
+    year: 2017
+    location: "Bhubaneswar, India"
+    doi: ""
+    url: ""
+    tags: ["brain MRI", "fuzzy clustering", "segmentation"]
+
+  - key: kahali2018ic3iot
+    selected: false
+    title: "A New Fuzzy Clustering Algorithm for Brain MR Image Segmentation Using Gaussian Probabilistic and Entropy-Based Likelihood Measures"
+    authors: "Sayan Kahali, Jamuna Kanta Sing, Punam Kumar Saha"
+    venue: "Int. Conf. on Communication, Computing & Internet of Things (IC3IoT)"
+    booktitle: "International Conference on Communication, Computing & Internet of Things (IC3IoT)"
+    publisher: "IEEE"
+    pages: "54-59"
+    year: 2018
+    location: "Chennai, India"
+    doi: ""
+    url: ""
+    tags: ["brain MRI", "fuzzy clustering", "entropy"]
+
+  - key: mahata2018aespc
+    selected: false
+    title: "A New Fuzzy Clustering Algorithm Using Uncertainty-based Entropy for Brain MR Image Segmentation"
+    authors: "Nabanita Mahata, Riya Patra, Sayan Kahali, Jamuna Kanta Sing"
+    venue: "Int. Conf. on Applied Electromagnetics, Signal Processing and Communication (AESPC)"
+    booktitle: "International Conference on Applied Electromagnetics, Signal Processing and Communication (AESPC)"
+    publisher: "IEEE"
+    volume: "1"
+    pages: "1-6"
+    year: 2018
+    location: "Bhubaneswar, India"
+    doi: ""
+    url: ""
+    tags: ["brain MRI", "fuzzy clustering", "entropy"]
+
+  - key: xu2021asilomar
+    selected: false
+    title: "Deep learning for motion corrected quantitative MRI"
+    authors: "Xiaojian Xu, Satya Kothapalli, Yu Sun, Jiaming Liu, Weijie Gan, Sayan Kahali, Dmitriy Yablonskiy, Ulugbek Kamilov"
+    venue: "55th Asilomar Conference on Signals, Systems and Computers"
+    booktitle: "55th Asilomar Conference on Signals, Systems and Computers"
+    publisher: "IEEE"
+    year: 2021
+    location: "California, USA"
+    doi: ""
+    url: ""
+    tags: ["quantitative MRI", "motion correction", "deep learning"]
+
+  - key: kahali2023spikecode
+    selected: true
+    title: "Low-Power Lossless Image Compression on Small Satellite Edge Using Spiking Neural Network"
+    authors: "Sayan Kahali, Sounak Dey, Chetan Kadway, Arijit Mukherjee, Arpan Pal, Manan Suri"
+    venue: "International Joint Conference on Neural Networks (IJCNN)"
+    booktitle: "International Joint Conference on Neural Networks (IJCNN)"
+    publisher: "IEEE"
+    year: 2023
+    location: "Queensland, Australia"
+    doi: ""
+    url: ""
+    tags: ["neuromorphic computing", "spiking neural networks", "image compression", "edge AI"]
+
+abstract:
+  - key: kahali2021sfn
+    selected: false
+    title: "The role of Neurons, Glia, and Synapses in Defining Hierarchical Structure of Resting State Functional Connectivity Networks"
+    authors: "Sayan Kahali, Marcus E. Raichle, Dmitriy A. Yablonskiy"
+    venue: "Global Connectome, Society for Neuroscience"
+    year: 2021
+    doi: ""
+    url: ""
+    tags: ["resting-state fMRI", "functional connectivity"]
+
+  - key: kahali2021ohbm
+    selected: false
+    title: "The Role of Neurons, Glia and Synapses in Defining Hierarchy of Resting State Functional Networks"
+    authors: "Sayan Kahali, Marcus E. Raichle, Dmitriy A. Yablonskiy"
+    venue: "Organization for Human Brain Mapping (OHBM)"
+    year: 2021
+    doi: ""
+    url: ""
+    tags: ["resting-state fMRI", "functional connectivity"]

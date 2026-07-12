@@ -1,0 +1,31 @@
+disabled = false
+locale = "en"
+label = "English"
+weight = 1
+title = "Dr. Sayan Kahali"
+
+[params]
+  displayName = "EN"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2 January 2006"
+  description = "Personal research website of Dr. Sayan Kahali, Senior AI Research Scientist working in biomedical image analysis, medical imaging, quantitative MRI, trustworthy AI, and neuromorphic computing."
+  copyright = "© Dr. Sayan Kahali"
+
+[params.author]
+  name = "Dr. Sayan Kahali"
+  email = "sayankahali@ieee.org"
+  image = "images/profile.jpg"
+  imageQuality = 96
+  headline = "Senior AI Research Scientist"
+  bio = "Biomedical image analysis, quantitative MRI, trustworthy clinical AI, and neuromorphic computing."
+  # Only verified links are enabled. Unset placeholders below and add real URLs
+  # (see TODO.md). Blowfish automatically hides any icon whose link is absent.
+  links = [
+    { email = "mailto:sayankahali@ieee.org" },
+    { google-scholar = "https://scholar.google.com/citations?user=xcT0TggAAAAJ&hl=en" },
+    { orcid = "https://orcid.org/0000-0002-8451-1531" },
+    { linkedin = "https://www.linkedin.com/in/dr-sayan-kahali-b0b4b76/" },
+    # { github = "https://github.com/USERNAME" },          # add when available
+    # { researchgate = "https://www.researchgate.net/profile/USERNAME" },  # add when available
+  ]

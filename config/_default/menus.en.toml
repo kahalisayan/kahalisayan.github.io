@@ -1,0 +1,67 @@
+# -- Main Menu --
+[[main]]
+  name = "About"
+  pageRef = "about"
+  weight = 10
+
+[[main]]
+  name = "Research"
+  pageRef = "research"
+  weight = 20
+
+[[main]]
+  name = "Projects"
+  pageRef = "projects"
+  weight = 30
+
+[[main]]
+  name = "Publications"
+  pageRef = "publications"
+  weight = 40
+
+[[main]]
+  name = "Patents"
+  pageRef = "patents"
+  weight = 50
+
+[[main]]
+  name = "Experience"
+  pageRef = "experience"
+  weight = 60
+
+[[main]]
+  name = "Service"
+  pageRef = "service"
+  weight = 70
+
+[[main]]
+  name = "Teaching"
+  pageRef = "teaching"
+  weight = 80
+
+# External Ghost blog — opens in a new tab (handled by Blowfish for external URLs).
+[[main]]
+  name = "Blog"
+  url = "https://the-conscious-compiler.ghost.io/"
+  weight = 90
+
+[[main]]
+  name = "Contact"
+  pageRef = "contact"
+  weight = 100
+
+# -- Footer Menu --
+[[footer]]
+  name = "About"
+  pageRef = "about"
+  weight = 10
+
+[[footer]]
+  name = "Publications"
+  pageRef = "publications"
+  weight = 20
+
+[[footer]]
+  name = "Contact"
+  pageRef = "contact"
+  weight = 30

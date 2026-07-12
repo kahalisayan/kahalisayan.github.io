@@ -1,0 +1,41 @@
+# Employment history — verbatim from CV.
+roles:
+  - when: "Mar 2025 – Present"
+    title: "Senior AI Research Scientist"
+    org: "Asian Institute of Gastroenterology Hospitals"
+    location: "Hyderabad, India"
+    summary: "AI research for gastroenterology imaging, including gastrointestinal ultrasound and colonoscopy, with a focus on clinically reliable decision support."
+
+  - when: "May 2022 – Mar 2025"
+    title: "Consultant"
+    org: "Tata Consultancy Services Research & Innovation"
+    location: "Kolkata, India"
+    summary: "Research on neuromorphic and efficient AI, including spiking neural networks for low-power lossless image compression on constrained edge and satellite systems."
+
+  - when: "Feb 2019 – Apr 2022"
+    title: "Postdoctoral Research Associate"
+    org: "Department of Radiology, Washington University School of Medicine"
+    location: "St. Louis, USA"
+    summary: "Quantitative MRI and neuroimaging: deep-learning reconstruction of qGRE metrics (DANSE), motion-artifact removal, and resting-state functional connectivity analysis."
+
+  - when: "2009 – 2015"
+    title: "Assistant Professor"
+    org: "Department of Computer Science & Engineering, Siliguri Institute of Technology"
+    location: "Siliguri, West Bengal, India"
+    summary: "Undergraduate teaching in computer science alongside doctoral research in volumetric medical image segmentation (leave without pay taken during M.Tech, Sep 2012 – Dec 2013)."
+
+education:
+  - when: "2018"
+    degree: "Ph.D. (Engineering), Computer Science & Engineering"
+    org: "Jadavpur University, India"
+    note: "Thesis: “Volumetric Medical Image Segmentation and Related Issues.” Supervisor: Prof. Jamuna Kanta Sing."
+
+  - when: "2012 – 2014"
+    degree: "M.Tech in Computer Science & Engineering"
+    org: "West Bengal University of Technology, India"
+    note: ""
+
+  - when: "2004 – 2008"
+    degree: "B.Tech in Computer Science & Engineering"
+    org: "West Bengal University of Technology, India"
+    note: ""
