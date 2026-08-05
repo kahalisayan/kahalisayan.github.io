@@ -238,6 +238,20 @@ conference:
     url: ""
     tags: ["neuromorphic computing", "spiking neural networks", "image compression", "edge AI"]
 
+  - key: kahali2025spikecode
+    selected: true
+    title: "SPIKECODE: Spiking Autoencoder FrameWork for Lossy Image Compression on Constrained Low-Power Edge Devices"
+    authors: "Sayan Kahali, Ajoy Dey, Aalekhya Mukhopadhyay, Sounak Dey"
+    venue: "16th Indian Conference on Computer Vision, Graphics and Image Processing (ICVGIP), ACM"
+    booktitle: "Proceedings of the Sixteenth Indian Conference on Computer Vision, Graphics and Image Processing (ICVGIP)"
+    publisher: "ACM"
+    pages: "1-8"
+    year: 2025
+    location: "Mandi, Himachal Pradesh, India"
+    doi: "10.1145/3774521.3774562"
+    url: "https://dl.acm.org/doi/full/10.1145/3774521.3774562"
+    tags: ["neuromorphic computing", "spiking neural networks", "image compression", "edge AI"]
+
 abstract:
   - key: kahali2021sfn
     selected: false
