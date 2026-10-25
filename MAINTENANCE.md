@@ -20,7 +20,8 @@ every push to `main`.
 - Deployed to GitHub Pages; repo is **public** (required for free Pages).
 - Google Search Console ownership **verified**; sitemap submitted.
 - Profiles wired in: Google Scholar, ORCID, LinkedIn.
-- Patents: 5 filings with application numbers, linked to their projects.
+- Patents: 5 entries (1 granted — US 12,689,755 B2, 4 filed) with application numbers,
+  linked to their projects.
 - Privacy enforced (no phone / DOB / marital status / IEEE number anywhere).
 
 **Pending (see [`TODO.md`](TODO.md))**

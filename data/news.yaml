@@ -2,6 +2,8 @@
 # Add new items at the top. date is free text (shown as-is).
 items:
   - date: "2026"
+    text: "US patent granted (US 12,689,755 B2) on a method and system for low-power lossless image compression using a spiking neural network."
+  - date: "2026"
     text: "India patent filed on intestinal inflammation evaluation using multi-modal ultrasound imaging."
   - date: "2025"
     text: "SPIKECODE — a spiking-autoencoder framework for lossy image compression on constrained low-power edge devices — presented at ICVGIP 2025, Mandi, Himachal Pradesh, India."

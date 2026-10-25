@@ -1,5 +1,6 @@
 # Patents — as provided by the author. Careful status language: a filed
-# application is a pending application, NOT a granted patent.
+# application is a pending application, NOT a granted patent. Mark an entry
+# "Granted" only once it has issued, and add its `patent` number (and `url`).
 # Newest first. `key` is used to link patents from project pages.
 items:
   - key: intestinal-inflammation-ultrasound
@@ -37,7 +38,9 @@ items:
   - key: snn-lossless-compression
     title: "Method and System for a Low-Power Lossless Image Compression Using a Spiking Neural Network"
     jurisdiction: "United States"
-    status: "Filed"
+    status: "Granted"
     year: 2024
-    application: "Application No. 20240422334"
+    patent: "US 12,689,755 B2 (granted 21 Jul 2026)"
+    application: "Application No. 18/740,775 · Pub. No. US 2024/0422334 A1"
+    url: "https://patents.google.com/patent/US12689755B2"
     description: "Spiking-neural-network method for low-power, lossless image compression."

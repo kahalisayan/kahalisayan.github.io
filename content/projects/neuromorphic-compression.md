@@ -37,10 +37,10 @@ communication, and hardware-aware deployment on constrained systems.
 ## Key outputs
 
 Presented at the International Joint Conference on Neural Networks (IJCNN) 2023.
-The work is also reflected in related patent filings — see the
+The work is also reflected in a granted US patent and related patent filings — see the
 [Patents](/patents/) page.
 
 ## Status
 
-Published, with associated patent filings. Related publications are listed on the
+Published, with a granted US patent and related patent filings. Related publications are listed on the
 [Publications](/publications/) page.

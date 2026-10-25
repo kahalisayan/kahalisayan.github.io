@@ -1,8 +1,8 @@
 ---
 title: "Patents"
-description: "Patent filings by Dr. Sayan Kahali in neuromorphic computing and spiking neural networks."
+description: "Patents and patent filings by Dr. Sayan Kahali in neuromorphic computing, spiking neural networks, and medical imaging."
 ---
 
-Patent filings related to neuromorphic computing and spiking neural networks. Status
-is stated exactly: a *filed* or *published* application is a pending application, not
-a granted patent.
+Patents and patent filings related to neuromorphic computing, spiking neural networks,
+and medical imaging. Status is stated exactly: a *filed* or *published* application is a
+pending application; entries marked *Granted* have issued as patents.
